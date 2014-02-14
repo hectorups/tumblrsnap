@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".PreviewPhotoActivity" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ivPreview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/llFilters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:tag="normal"
+                style="@style/FrameLayoutFilter">
+                <ImageView
+                    android:id="@+id/ivNormalFrame"
+                    style="@style/ImageViewFrame"/>
+                <ImageView
+                    android:id="@+id/ivNormal"
+                    style="@style/ImageViewFilter"/>
+                <TextView
+                    style="@style/FilterLabel"
+                    android:text="Normal"/>
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:tag="blur"
+                style="@style/FrameLayoutFilter">
+                <ImageView
+                    style="@style/ImageViewFrame"/>
+                <ImageView
+                    android:id="@+id/ivBlur"
+                    style="@style/ImageViewFilter"/>
+                <TextView
+                    style="@style/FilterLabel"
+                    android:text="Blur"/>
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:tag="grayscale"
+                style="@style/FrameLayoutFilter">
+                <ImageView
+                    style="@style/ImageViewFrame"/>
+                <ImageView
+                    android:id="@+id/ivGrayscale"
+                    style="@style/ImageViewFilter"/>
+                <TextView
+                    style="@style/FilterLabel"
+                    android:text="Grayscale"/>
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:tag="christal"
+                style="@style/FrameLayoutFilter">
+                <ImageView
+                    style="@style/ImageViewFrame"/>
+                <ImageView
+                    android:id="@+id/ivChristal"
+                    style="@style/ImageViewFilter"/>
+                <TextView
+                    style="@style/FilterLabel"
+                    android:text="Christal"/>
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:tag="solar"
+                style="@style/FrameLayoutFilter">
+                <ImageView
+                    style="@style/ImageViewFrame"/>
+                <ImageView
+                    android:id="@+id/ivSolar"
+                    style="@style/ImageViewFilter"/>
+                <TextView
+                    style="@style/FilterLabel"
+                    android:text="Solar"/>
+            </FrameLayout>
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:tag="glow"
+                style="@style/FrameLayoutFilter">
+                <ImageView
+                    style="@style/ImageViewFrame"/>
+                <ImageView
+                    android:id="@+id/ivGlow"
+                    style="@style/ImageViewFilter"/>
+                <TextView
+                    style="@style/FilterLabel"
+                    android:text="Glow"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+</LinearLayout>
